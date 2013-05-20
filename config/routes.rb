@@ -1,10 +1,16 @@
 EyeDoc::Application.routes.draw do
+  get "availibity/show"
+
+  get "availibity/schedule"
+
+  devise_for :doctors
+
   resources :apps
   root :to => "apps#index"
-  
-  devise_for :patients do 
-
-  end
+  #get '/schedule/cal'# => "hello#world"
+  #get '/log_in'
+  devise_for :patients
+  get '/check' => "apps#checkin"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

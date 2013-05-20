@@ -9,9 +9,15 @@ class AppsController < ApplicationController
     @apps = App.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html
       format.json { render json: @apps }
     end
+    end
+  end
+
+  def checkin
+    respond_to do |format|
+      format.html { render 'check' }
     end
   end
 

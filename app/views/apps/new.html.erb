@@ -30,7 +30,7 @@
 <% if patient_signed_in? %>
   <small>You are currently signed in</small>
   <br />
-  <a class="btn btn-danger" href="/patients/sign_out">Logout</a>
+  <%= link_to :logout,  destroy_patient_session_path, class: 'btn btn-danger', method: :delete %>
 <% else %>
   <small>It's important to create an account because that is how you are able to communicate with us. You can't easily create an account by clicking "New Patient" above.</small>
 <% end %>
