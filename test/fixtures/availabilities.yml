@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  start: 2013-05-20 12:12:36
+  end: 2013-05-20 12:12:36
+  doctor: 
+
+two:
+  start: 2013-05-20 12:12:36
+  end: 2013-05-20 12:12:36
+  doctor: 

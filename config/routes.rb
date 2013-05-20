@@ -1,7 +1,7 @@
 EyeDoc::Application.routes.draw do
-  get "availibity/show"
+  get "doctor/:id/availability" => "availability#show"
 
-  get "availibity/schedule"
+  get "availability/schedule"
 
   devise_for :doctors
 
