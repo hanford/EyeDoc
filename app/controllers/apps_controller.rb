@@ -21,6 +21,12 @@ class AppsController < ApplicationController
     end
   end
 
+  #def request
+  #respond_to do |format|
+  #format.html { render 'request' }
+  #end
+  #end
+
   # GET /apps/1
   # GET /apps/1.json
   def show

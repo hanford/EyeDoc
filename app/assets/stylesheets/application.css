@@ -13,3 +13,5 @@
  */
 
 @import 'bootstrap';
+
+.hero-unit {background-color: #34495e;}
