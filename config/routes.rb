@@ -10,6 +10,7 @@ EyeDoc::Application.routes.draw do
   devise_for :patients
   get '/check' => "apps#checkin"
   get '/request' => "apps#request"
+  get '/schedule' => "apps#schedule"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
