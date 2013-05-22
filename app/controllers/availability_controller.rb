@@ -4,6 +4,9 @@ class AvailabilityController < ApplicationController
   	@availabilities = doctor.availabilities
   end
 
-  def schedule
-  end
+ def schedule
+    respond_to do |format|
+      format.html { render 'schedule' }
+    end
+ end
 end
