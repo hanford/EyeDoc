@@ -6,10 +6,13 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'rspec'
+
 gem 'devise'
-gem 'bootstrap-sass'
-gem 'pry-rails', group: :development
+group :development, :test do
+	gem 'pry-rails'
+	gem 'rspec'
+	gem 'rspec-rails', '~> 2.0'
+end
 
 
 
@@ -18,7 +21,7 @@ gem 'pry-rails', group: :development
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
+  gem 'bootstrap-sass'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
