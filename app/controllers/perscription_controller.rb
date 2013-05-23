@@ -1,7 +1,8 @@
 class PerscriptionController < ApplicationController
-  def request
+
+  def refill
     respond_to do |format|
-      format.html { render 'request' }
+      format.html
     end
   end
 end
