@@ -8,4 +8,7 @@ class Patient < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
   attr_accessible :eyecolor, :name, :title
+
+  validates_length_of :password, minimum: 8
+
 end
