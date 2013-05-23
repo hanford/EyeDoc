@@ -5,6 +5,7 @@ class AvailabilityController < ApplicationController
   end
 
  def schedule
+ 	
     respond_to do |format|
       format.html { render 'schedule' }
     end

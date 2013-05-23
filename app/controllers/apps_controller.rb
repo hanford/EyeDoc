@@ -16,6 +16,7 @@ class AppsController < ApplicationController
   end
 
   def checkin
+    
     respond_to do |format|
       format.html { render 'check' }
     end

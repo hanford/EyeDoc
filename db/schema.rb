@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130520191236) do
+ActiveRecord::Schema.define(:version => 20130522233330) do
 
   create_table "apps", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -55,6 +55,20 @@ ActiveRecord::Schema.define(:version => 20130520191236) do
 
   add_index "doctors", ["email"], :name => "index_doctors_on_email", :unique => true
   add_index "doctors", ["reset_password_token"], :name => "index_doctors_on_reset_password_token", :unique => true
+
+  create_table "events", :force => true do |t|
+    t.string   "name"
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "medzs", :force => true do |t|
+    t.string   "perscription"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "patients", :force => true do |t|
     t.string   "title"

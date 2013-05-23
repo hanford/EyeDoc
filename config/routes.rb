@@ -11,6 +11,7 @@ EyeDoc::Application.routes.draw do
   get '/check' => "apps#checkin"
   get '/request' => "apps#request"
   get '/schedule' => "availability#schedule"
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
