@@ -1,0 +1,29 @@
+ <div class="hero-unit" align="center">
+  <h2>Request Refill</h2>
+  <p>You can easily request a refill for a previous perscription, if you would like to change a perscription or cancel one, please schedule an appointment <a href="/schedule">here.</a></p>
+</div>
+<div class="container" align="center">
+
+<%= form_for(@medzz) do |f| %>
+  <% if @medzz.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@medzz.errors.count, "error") %> prohibited this medzz from being saved:</h2>
+
+      <ul>
+      <% @medzz.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :medicine %><br />
+    <%= f.text_field :medicine %>
+  </div>
+  <div class="actions">
+    <a class="btn btn-danger" href="/">Cancel</a>
+    <%= f.submit class: "btn btn-success" %>
+  </div>
+<% end %>
+</div>

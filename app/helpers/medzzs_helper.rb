@@ -1,0 +1,2 @@
+module MedzzsHelper
+end

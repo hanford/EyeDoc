@@ -11,11 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20130523183552) do
-=======
-ActiveRecord::Schema.define(:version => 20130520191236) do
->>>>>>> f61d902b63dab11cbf1257fea6d428cb975eee3f
+ActiveRecord::Schema.define(:version => 20130523222253) do
 
   create_table "apps", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -31,6 +27,16 @@ ActiveRecord::Schema.define(:version => 20130520191236) do
   end
 
   add_index "availabilities", ["doctor_id"], :name => "index_availabilities_on_doctor_id"
+
+  create_table "availibilities", :force => true do |t|
+    t.datetime "start"
+    t.datetime "end"
+    t.integer  "doctor_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "availibilities", ["doctor_id"], :name => "index_availibilities_on_doctor_id"
 
   create_table "doctors", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -49,6 +55,26 @@ ActiveRecord::Schema.define(:version => 20130520191236) do
 
   add_index "doctors", ["email"], :name => "index_doctors_on_email", :unique => true
   add_index "doctors", ["reset_password_token"], :name => "index_doctors_on_reset_password_token", :unique => true
+
+  create_table "events", :force => true do |t|
+    t.string   "name"
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "medzs", :force => true do |t|
+    t.string   "perscription"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "medzzs", :force => true do |t|
+    t.text     "medicine"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "patients", :force => true do |t|
     t.string   "title"

@@ -1,16 +1,13 @@
 EyeDoc::Application.routes.draw do
-  
-
-  
-
   devise_for :doctors
   devise_for :patients
   resources :apps
+  resources :medzzs
   root :to => "apps#index"
   
   get '/check' => "apps#checkin"
 
-  get '/refill' => "perscription#refill"
+  get '/refill' => "medzzs#new"
 
   get "availability/schedule"
   get '/schedule' => "availability#schedule"
