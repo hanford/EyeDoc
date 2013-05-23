@@ -10,7 +10,7 @@ EyeDoc::Application.routes.draw do
   
   get '/check' => "apps#checkin"
 
-  get '/request' => "perscription#request"
+  get '/refill' => "perscription#refill"
 
   get "availability/schedule"
   get '/schedule' => "availability#schedule"
