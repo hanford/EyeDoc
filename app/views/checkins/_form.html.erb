@@ -1,0 +1,32 @@
+<%= form_for(@checkin) do |f| %>
+  <% if @checkin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@checkin.errors.count, "error") %> prohibited this checkin from being saved:</h2>
+
+      <ul>
+      <% @checkin.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "Have your thought of having a LASIK treatment done?" %><%= f.check_box :lasik %>
+  </div>
+  <div class="field">
+    <%= f.label "Do you wear glasses?" %><%= f.check_box :glasses %>
+  </div>
+  <div class="field">
+    <%= f.label "Are you interested in contacts?" %><%= f.check_box :contacts %>
+  </div>
+  <div class="field">
+    <%= f.label "Do you have trouble seeing steps?" %><%= f.check_box :steps %>
+  </div>
+  <div class="field">
+    <%= f.label "Do you have trouble with vision at work?" %><%= f.check_box :work %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

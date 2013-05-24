@@ -1,4 +1,7 @@
 EyeDoc::Application.routes.draw do
+  resources :checkins
+
+
   devise_for :doctors
   devise_for :patients
   resources :apps

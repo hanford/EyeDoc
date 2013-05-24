@@ -25,16 +25,12 @@
   </div>
   <div class="span4">
     <h3>Check in</h3>
-  <p>Users can check in without an account. This will mail the form to our eye doctor notifying our optometrist that you are ready and have the correct information for the appointment.</p>
+  <p>Users can't check in without an account because our system mails the form notifying our optometrist that you are ready and have the correct information for the appointment.</p>
   <br />
-    <a class="btn" href="/check">
-      Check in
-    </a>
+    <%= link_to 'Check in', new_checkin_path, class: "btn" %>
   </div>
 </div>
 
-    <br />
-    <br />
     <br />
   <address>
   <strong>You can find us below</strong><br>
@@ -45,7 +41,7 @@
 <% if patient_signed_in? %>
   <small>You are currently signed in</small>
   <br />
-  <a class="btn btn-danger" href="/patients/sign_out">Logout</a>
+  <a class="btn" href="/patients/sign_out">Logout</a>
   
 <% else %>
   <small>It's important to create an account because that is how you are able to communicate with us. You can't easily create an account by clicking "New Patient" above.</small>
