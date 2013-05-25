@@ -1,49 +1,47 @@
-<div class="hero-unit" align="center">
-  <h2>Welcome To Chris Hanford's Optometry.</h2>
-  <p>We have made a really easy way for new patients to become patients, and exsisting patients to take care of Check-ins, scheduling and perscription refill requests.</p>
-<br />
-</div>
-<div align="center">
   <div class="container">
- <div class="row-fluid">
-  <div class="span4">
+    <div class="sixteen columns">
+      <h1 class="remove-bottom" style="margin-top: 40px">Welcome To Chris Hanford's Optometry.</h1>
+
+  <h6>We have made a really easy way for new patients to become patients, and exsisting patients to take care of Check-ins, scheduling and perscription refill requests.</h6>
+<hr>
+</div>
+<div class="one-third column">
     <h3>New Patient</h3>
     <p>By clicking below you will be able to create a new account which will can be used to refrill perscriptions, schedule appoints and even check in at our office. It's important to remember your name and password as they can be used to access sensitive information.</p>
-  <a class="btn" href="/patients/sign_up">
+  <a class="button" href="/patients/sign_up">
       New Patient
     </a>
   </div>
-    <div class="span4">
+    <div class="one-third column">
           <h3>Exsisting Patient</h3>
   <p>Exsisting patients can sign in below to request a refill, schedule an appointment or check in.</p>
   <br />
   <br />
   <br />
-    <a class="btn" href="/patients/sign_in">
+    <a class="button" href="/patients/sign_in">
       Exsisting Patient
     </a>
   </div>
-  <div class="span4">
+  <div class="one-third column">
     <h3>Check in</h3>
   <p>Users can't check in without an account because our system mails the form notifying our optometrist that you are ready and have the correct information for the appointment.</p>
   <br />
-    <%= link_to 'Check in', new_checkin_path, class: "btn" %>
+    <%= link_to 'Check in', new_checkin_path, class: "button" %>
   </div>
-</div>
-
-    <br />
+  <!--
   <address>
   <strong>You can find us below</strong><br>
   795 Eastbay, Suite 400<br>
   Traverse City, MI 49686<br>
   <abbr title="Phone">Phone:</abbr> (231) 409-8484
 </address>
+-->
 <% if patient_signed_in? %>
   <small>You are currently signed in</small>
   <br />
-  <a class="btn" href="/patients/sign_out">Logout</a>
+  <a class="button" href="/patients/sign_out">Logout</a>
   
 <% else %>
-  <small>It's important to create an account because that is how you are able to communicate with us. You can't easily create an account by clicking "New Patient" above.</small>
+  <!--<small>It's important to create an account because that is how you are able to communicate with us. You can't easily create an account by clicking "New Patient" above.</small>-->
 <% end %>
   </div>

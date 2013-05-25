@@ -1,8 +1,10 @@
- <div class="hero-unit" align="center">
+<div class="container">
+    <div class="sixteen columns">
   <h2>Request Refill</h2>
-  <p>You can easily request a refill for a previous perscription, if you would like to change a perscription or cancel one, please schedule an appointment <a href="/schedule">here.</a></p>
+  <h6>You can easily request a refill for a previous perscription, if you would like to change a perscription or cancel one, please schedule an appointment <a href="/schedule">here.</a></h6>
 </div>
-<div class="container" align="center">
+<hr>
+<div align="center">
 
 <%= form_for(@medzz) do |f| %>
   <% if @medzz.errors.any? %>
@@ -22,8 +24,8 @@
     <%= f.text_field :medicine %>
   </div>
   <div class="actions">
-    <a class="btn btn-danger" href="/">Cancel</a>
-    <%= f.submit class: "btn btn-success" %>
+    <a class="button" href="/">Cancel</a>
+    <%= f.submit class: "button" %>
   </div>
 <% end %>
 </div>
