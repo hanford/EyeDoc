@@ -28,16 +28,6 @@ ActiveRecord::Schema.define(:version => 20130524005231) do
 
   add_index "availabilities", ["doctor_id"], :name => "index_availabilities_on_doctor_id"
 
-  create_table "availibilities", :force => true do |t|
-    t.datetime "start"
-    t.datetime "end"
-    t.integer  "doctor_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  add_index "availibilities", ["doctor_id"], :name => "index_availibilities_on_doctor_id"
-
   create_table "checkins", :force => true do |t|
     t.boolean  "lasik"
     t.boolean  "glasses"
@@ -65,20 +55,6 @@ ActiveRecord::Schema.define(:version => 20130524005231) do
 
   add_index "doctors", ["email"], :name => "index_doctors_on_email", :unique => true
   add_index "doctors", ["reset_password_token"], :name => "index_doctors_on_reset_password_token", :unique => true
-
-  create_table "events", :force => true do |t|
-    t.string   "name"
-    t.datetime "start_at"
-    t.datetime "end_at"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "medzs", :force => true do |t|
-    t.string   "perscription"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-  end
 
   create_table "medzzs", :force => true do |t|
     t.text     "medicine"
