@@ -1,8 +1,10 @@
   <div class="container">
     <div class="sixteen columns">
       <h1 class="remove-bottom" style="margin-top: 40px">Welcome To Chris Hanford's Optometry.</h1>
+      <br />
 
   <h6>We have made a really easy way for new patients to become patients, and exsisting patients to take care of Check-ins, scheduling and perscription refill requests.</h6>
+  <br />
 <hr>
 </div>
 <div class="one-third column">
@@ -28,20 +30,22 @@
   <br />
     <%= link_to 'Check in', new_checkin_path, class: "button" %>
   </div>
-  <!--
+<br />
   <address>
   <strong>You can find us below</strong><br>
   795 Eastbay, Suite 400<br>
   Traverse City, MI 49686<br>
   <abbr title="Phone">Phone:</abbr> (231) 409-8484
 </address>
--->
+
 <% if patient_signed_in? %>
   <small>You are currently signed in</small>
   <br />
   <a class="button" href="/patients/sign_out">Logout</a>
   
 <% else %>
-  <!--<small>It's important to create an account because that is how you are able to communicate with us. You can't easily create an account by clicking "New Patient" above.</small>-->
+<br />
+<br />
+ <footer><small>It's important to create an account because that is how you are able to communicate with us. You can't easily create an account by clicking "New Patient" above.</small></footer>
 <% end %>
   </div>
