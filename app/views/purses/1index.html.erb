@@ -1,0 +1,25 @@
+<h1>Listing purses</h1>
+
+<table>
+  <tr>
+    <th>Time</th>
+    <th>Day</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @purses.each do |purse| %>
+  <tr>
+    <td><%= purse.time %></td>
+    <td><%= purse.day %></td>
+    <td><%= link_to 'Show', purse %></td>
+    <td><%= link_to 'Edit', edit_purse_path(purse) %></td>
+    <td><%= link_to 'Destroy', purse, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Purse', new_purse_path %>

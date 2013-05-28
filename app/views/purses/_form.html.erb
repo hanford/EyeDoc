@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css" />
+  <script>
+  $(function() {
+    $( "#datepicker" ).datepicker();
+
+  });
+  </script>
+</head>
+<body>
+    <div class="container">
+    <div class="sixteen columns">
+      <h1 class="remove-bottom" style="margin-top: 40px">Schedule your next appointment</h1>
+      <br />
+    <p>This is where you can easily schedule your next appointment.</p>
+    <br />
+  <hr>
+<%= form_for(@purse) do |f| %>
+  <% if @purse.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@purse.errors.count, "error") %> prohibited this purse from being saved:</h2>
+
+      <ul>
+      <% @purse.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :time %><br />
+     <%= f.text_field :time %>
+  </div>
+  <div class="field">
+    <%= f.label :day %><br />
+     <%= f.datepicker :day %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

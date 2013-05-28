@@ -4,10 +4,9 @@ gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+gem 'jquery-rails'
+gem 'jquery_datepicker'
 gem 'sqlite3'
-
-
 
 gem 'devise'
 group :development, :test do

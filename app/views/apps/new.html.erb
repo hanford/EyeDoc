@@ -8,6 +8,7 @@
 
 </div>
   <div class="one-third column">
+    <div class="well">
           <h3>Request</h3>
   <p>Requesting Refills has never been easier, you simply click the button below and enter the perscription information you would like to refill. If you would like to try a new medication you will need to schedule an appointment first.</p>
   <br />
@@ -15,21 +16,32 @@
       Request Refill
     </a>
   </div>
+  </div>
   <div class="one-third column">
+    <div class="well">
     <h3>Schedule</h3>
   <p>Hate having to schedule appointments over the phone? Well look no further. We have built an barebones easy method for scheduling appointments with our doctor. Simply click the button below and follow the intstructions on the follow page.</p>
+
     <a class="button" href="/schedule">
       Schedule Appointment
     </a>
   </div>
+  </div>
     <div class="one-third column">
+      <div class="well">
     <h3>Check in</h3>
-  <p>Checking into our office has never been easier. Here you can simply check in from any device, just click the button below to get started.</p><br /><br />
+  <p>Checking into our office has never been easier. Here you can simply check in from any device, just click the button below to get started.</p>
+  <br />
+  <br />
+  <br />
   <%= link_to 'Check in', new_checkin_path, class: "button" %>
-  
+  <br />
+
+  </div>
   </div>
   <br />
 </div>
+
 <% if patient_signed_in? %>
   <small>You are currently signed in</small>
   <br />
@@ -37,4 +49,5 @@
 <% else %>
   <small>It's important to create an account because that is how you are able to communicate with us. You can't easily create an account by clicking "New Patient" above.</small>
 <% end %>
+
 

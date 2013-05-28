@@ -1,4 +1,7 @@
 EyeDoc::Application.routes.draw do
+  resources :purses
+
+
   resources :checkins
 
 
@@ -12,8 +15,7 @@ EyeDoc::Application.routes.draw do
 
   get '/refill' => "medzzs#new"
 
-  get "availability/schedule"
-  get '/schedule' => "availability#schedule"
+  get '/schedule' => "purses#new"
   get "doctor/:id/availability" => "availability#show"
 
   # The priority is based upon order of creation:
