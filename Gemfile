@@ -7,7 +7,7 @@ gem 'rails', '3.2.13'
 gem 'jquery-rails'
 gem 'jquery_datepicker'
 gem 'sqlite3'
-
+gem "skeleton-rails", "~> 0.1.0"
 gem 'devise'
 group :development, :test do
 	gem 'pry-rails'
